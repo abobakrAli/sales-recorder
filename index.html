@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Reem+Kufi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Lemonada:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main my-5">
+        <img src="logo.png" class="imgLogo">
+        <p id="mainTitle">الخير والبركة </p>
+        <span class="phoneNumber">01127370699</span>
+    </div>
+    <div class="timeArea">
+        <i class="far fa-clock"></i>
+        <p id="time"></p>
+    </div>
+
+    <div class="container py-5">
+        <div class="addForm" id="mainForm">
+            <button onclick="clearLocalStorage()" id="clearLocalStorage" class="btn btn-danger my-3"> بداية يوم جديد
+            </button>
+          
+            <br>
+            <br>
+            <label>إسم المنتج</label>
+            <input type="text" class="my-2 form-control w-50" id="productNameInput">
+            <label>السعر</label>
+            <input type="number" class="my-2 form-control w-50" id="productPriceInput">
+            <label>العدد</label>
+            <input type="number" class="my-2 form-control w-50" id="productCategoryInput">
+
+            <button id="addBtn" class="btn btn-info my-3">إضافة منتج</button>
+            <button class="btn btn-warning" id="toTotalCellBtn"><a href="#totalCell">الي اسفل</a></button>
+
+        </div>
+        <div class="w-50 my-5 m-auto">
+            <input onkeyup="searchProduct(this.value)" placeholder="إبحث عن المنتج" class="form-control">
+        </div>
+        <div class="container mt-5">
+            <table id="table" class="table text-center">
+                <thead>
+                    <th>الترتيب</th>
+                    <th>اسم المنتج</th>
+                    <th>السعر</th>
+                    <th>العدد</th>
+                    <th>الإجمالي</th>
+                    <th> تعديل منتج</th>
+                    <th>حذف منتح</th>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+                <tr class="lastRow">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> <button class="btn btn-warning" id="toTotalCellBtn"><a href="#mainForm">الي اعلي</a></button></td>
+                    <td id="totalCell">0.00</td>
+                    <td class="totalDay">إجمالي اليوم</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="myLogo">
+        <span>Eng AboBakr<br>01122034641</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
